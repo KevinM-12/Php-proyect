@@ -21,9 +21,10 @@
 class Cuadrado {
      private $lado = 0;
 
-     public function __construct() {
-          $this->lado = 4;
+     public function __construct($lado = 4) {
+          $this->lado = $lado;
      }
+
 
      public function getArea(){
           return $this ->lado * $this ->lado;
@@ -31,7 +32,7 @@ class Cuadrado {
 }
 
 //Instanciacion
-$cuadrado1 = new Cuadrado (); //nstanciar un objeto de la clase 'Cuadrado'
+$cuadrado1 = new Cuadrado (5); //nstanciar un objeto de la clase 'Cuadrado'
 
 echo "El area del cuadrado es: " . $cuadrado1->getArea();
 ?>
